@@ -26,6 +26,30 @@
                     "value": "Any value 003"
                 }
             ]
+        },
+        {
+            "type": "TestStep",
+            "name": "Test Step #002",
+            "description": "Test Step Description goes here",
+            "children": [
+                {
+                    "type": "TestStepValue",
+                    "name": "TS Value 2 001",
+                    "value": "Any value 001",
+                    "actionMode": "Verify",
+                    "actionType": "number"
+                },
+                {
+                    "type": "TestStepValue",
+                    "name": "TS Value 2 002",
+                    "value": "Any value 002"
+                },
+                {
+                    "type": "TestStepValue",
+                    "name": "TS Value 2 003",
+                    "value": "Any value 003"
+                }
+            ]
         }
     ]
 }
