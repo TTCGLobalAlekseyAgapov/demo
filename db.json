@@ -1,14 +1,31 @@
 {
-  "posts": [
-    { "id": 1, "title": "Post 1" },
-    { "id": 2, "title": "Post 2" },
-    { "id": 3, "title": "Post 3" }
-  ],
-  "comments": [
-    { "id": 1, "body": "some comment", "postId": 1 },
-    { "id": 2, "body": "some comment", "postId": 1 }
-  ],
-  "profile": {
-    "name": "typicode"
-  }
+    "type": "TestCase",
+    "name": "Test #001",
+    "description": "Test Case Description goes here",
+    "children": [
+        {
+            "type": "TestStep",
+            "name": "Test Step #001",
+            "description": "Test Step Description goes here",
+            "children": [
+                {
+                    "type": "TestStepValue",
+                    "name": "TS Value 001",
+                    "value": "Any value 001",
+                    "actionMode": "Input",
+                    "actionType": "string"
+                },
+                {
+                    "type": "TestStepValue",
+                    "name": "TS Value 002",
+                    "value": "Any value 002"
+                },
+                {
+                    "type": "TestStepValue",
+                    "name": "TS Value 003",
+                    "value": "Any value 003"
+                }
+            ]
+        }
+    ]
 }
