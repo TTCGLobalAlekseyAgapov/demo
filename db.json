@@ -1,55 +1,77 @@
 {
-    "type": "TestCase",
-    "name": "Test #001",
-    "description": "Test Case Description goes here",
-    "children": [
+  "type": "TestCase",
+  "name": "Validate Transaction Engine Core Processing",
+  "description": "Validate the functionality of the Transaction Engine, specifically its ability to transform, route, and persist messages as expected.",
+  "children": [
+    {
+      "type": "TestStep",
+      "name": "Send Test Messages",
+      "description": "Send a variety of test messages through the API Gateway to the Transaction Engine, covering different message types, sizes, and formats.",
+      "children": [
         {
-            "type": "TestStep",
-            "name": "Test Step #001",
-            "description": "Test Step Description goes here",
-            "children": [
-                {
-                    "type": "TestStepValue",
-                    "name": "TS Value 001",
-                    "value": "Any value 001",
-                    "actionMode": "Input",
-                    "actionType": "string"
-                },
-                {
-                    "type": "TestStepValue",
-                    "name": "TS Value 002",
-                    "value": "Any value 002"
-                },
-                {
-                    "type": "TestStepValue",
-                    "name": "TS Value 003",
-                    "value": "Any value 003"
-                }
-            ]
+          "type": "TestStepValue",
+          "name": "Message Type",
+          "value": "Various",
+          "actionMode": "Input",
+          "actionType": "string"
         },
         {
-            "type": "TestStep",
-            "name": "Test Step #002",
-            "description": "Test Step Description goes here",
-            "children": [
-                {
-                    "type": "TestStepValue",
-                    "name": "TS Value 2 001",
-                    "value": "Any value 001",
-                    "actionMode": "Verify",
-                    "actionType": "number"
-                },
-                {
-                    "type": "TestStepValue",
-                    "name": "TS Value 2 002",
-                    "value": "Any value 002"
-                },
-                {
-                    "type": "TestStepValue",
-                    "name": "TS Value 2 003",
-                    "value": "Any value 003"
-                }
-            ]
+          "type": "TestStepValue",
+          "name": "Message Size",
+          "value": "Variable",
+          "actionMode": "Input",
+          "actionType": "string"
+        },
+        {
+          "type": "TestStepValue",
+          "name": "Message Format",
+          "value": "Multiple",
+          "actionMode": "Input",
+          "actionType": "string"
         }
-    ]
+      ]
+    },
+    {
+      "type": "TestStep",
+      "name": "Verify Message Transformation",
+      "description": "Verify message transformation according to pre-defined rules.",
+      "children": [
+        {
+          "type": "TestStepValue",
+          "name": "Transformation Rules",
+          "value": "Predefined",
+          "actionMode": "Verify",
+          "actionType": "string"
+        }
+      ]
+    },
+    {
+      "type": "TestStep",
+      "name": "Verify Message Routing",
+      "description": "Ensure correct routing of messages based on their content or metadata.",
+      "children": [
+        {
+          "type": "TestStepValue",
+          "name": "Routing Criteria",
+          "value": "Content/Metadata",
+          "actionMode": "Verify",
+          "actionType": "string"
+        }
+      ]
+    },
+    {
+      "type": "TestStep",
+      "name": "Confirm Message Persistence",
+      "description": "Confirm successful persistence of messages and related data to the appropriate databases (relational and NoSQL).",
+      "children": [
+        {
+          "type": "TestStepValue",
+          "name": "Database Type",
+          "value": "Relational and NoSQL",
+          "actionMode": "Verify",
+          "actionType": "string"
+        }
+      ]
+    }
+  ]
 }
